@@ -5,9 +5,12 @@ function App() {
     <div className="app">
      <div className="main">main</div>
      <div className="pyramid">money</div>
-
-
-
+     <ul className="moneyList">
+      <li className="moneyListItem">$ 400</li>
+      <li className="moneyListItem">$ 300</li>
+      <li className="moneyListItem">$ 200</li>
+      <li className="moneyListItem">$ 100</li>
+      </ul>
     </div>
   );
 }
