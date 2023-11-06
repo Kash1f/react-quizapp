@@ -1,11 +1,15 @@
-import "./app.css"
 
-import {useEffect, useMemo, useState} from "react";
+import "./App.css";
+import { useEffect, useMemo, useState } from "react";
 import Start from "./components/Start";
 import Timer from "./components/Timer";
 import Trivia from "./components/Trivia";
 
 function App() {
+  const [username, setUsername] = useState(null);
+  const [timeOut, setTimeOut] = useState(false);
+  const [questionNumber, setQuestionNumber] = useState(1);
+  const [earned, setEarned] = useState("$ 0");
 
   const data = [
     {
@@ -103,18 +107,14 @@ function App() {
       setEarned(moneyPyramid.find((m) => m.id === questionNumber - 1).amount);
   }, [questionNumber, moneyPyramid]);
 
-
-  
-
-
-  return(
+  return (
     <div className="app">
       {!username ? (
         <Start setUsername={setUsername} />
       ) : (
         <>
-        <div className="main">
-        {timeOut ? (
+          <div className="main">
+            {timeOut ? (
               <h1 className="endText">You earned: {earned}</h1>
             ) : (
               <>
@@ -158,6 +158,5 @@ function App() {
     </div>
   );
 }
-    
 
 export default App;
