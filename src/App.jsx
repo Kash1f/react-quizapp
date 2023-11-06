@@ -4,13 +4,29 @@ function App() {
   return (
     <div className="app">
      <div className="main">main</div>
-     <div className="pyramid">money</div>
+     <div className="pyramid">
      <ul className="moneyList">
-      <li className="moneyListItem">$ 400</li>
-      <li className="moneyListItem">$ 300</li>
-      <li className="moneyListItem">$ 200</li>
-      <li className="moneyListItem">$ 100</li>
+      <li className="moneyListItem active">
+        <span className="moneyListItemNumber">4</span>
+        <span className="moneyListItemAmount">$ 400</span>
+        </li>
+        <li className="moneyListItem">
+        <span className="moneyListItemNumber">4</span>
+        <span className="moneyListItemAmount">$ 400</span>
+        </li>
+        <li className="moneyListItem">
+        <span className="moneyListItemNumber">4</span>
+        <span className="moneyListItemAmount">$ 400</span>
+        </li>
+      
+        <li className="moneyListItem">
+        <span className="moneyListItemNumber">4</span>
+        <span className="moneyListItemAmount">$ 400</span>
+        </li>
+      
+      
       </ul>
+    </div>
     </div>
   );
 }
